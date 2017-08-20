@@ -2,7 +2,7 @@ CC=gcc
 BIN=bin
 
 default:
-	echo "chapter 1: A tutorial introduction"
+	echo "Chapter 1: A Tutorial Introduction"
 
 01-hello: $(BIN)/01-hello.out
 	./$<
