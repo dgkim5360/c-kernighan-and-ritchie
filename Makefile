@@ -1,5 +1,6 @@
 CH1=ch1-a-tutorial-introduction
 CH2=ch2-types-operators-and-expressions
+CH3=ch3-control-flow
 
 default:
 	echo "Hello"
@@ -124,6 +125,35 @@ ex208:
 ex210:
 	$(MAKE) -C $(CH2) ex10
 
+
+303-binsearch:
+	$(MAKE) -C $(CH3) 03-binsearch
+
+ex301:
+	$(MAKE) -C $(CH3) ex01
+
+304-count:
+	$(MAKE) -C $(CH3) 04-count
+
+ex302:
+	$(MAKE) -C $(CH3) ex02
+
+305-1-atoi:
+	$(MAKE) -C $(CH3) 05-1-atoi
+
+305-2-shellsort:
+	$(MAKE) -C $(CH3) 05-2-shellsort
+
+305-3-reverse:
+	$(MAKE) -C $(CH3) 05-3-reverse
+
+306-itoa:
+	$(MAKE) -C $(CH3) 06-itoa
+
+307-trim:
+	$(MAKE) -C $(CH3) 07-trim
+
 clean:
 	$(MAKE) -C $(CH1) clean
 	$(MAKE) -C $(CH2) clean
+	$(MAKE) -C $(CH3) clean
