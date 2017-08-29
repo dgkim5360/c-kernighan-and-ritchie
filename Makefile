@@ -1,9 +1,14 @@
 CH1=ch1-a-tutorial-introduction
 CH2=ch2-types-operators-and-expressions
 CH3=ch3-control-flow
+CH4=ch4-functions-and-program-structure
 
 default:
-	echo "Hello"
+	echo "\n==========\n" \
+	"Hello, <tab> key will be extremely helpful to execute the examples and exercises.\n\n" \
+  "e.g.,\n" \
+	"1<tab><tab>: shows examples of chapter 1\n" \
+  "ex1<tab><tab>: shows exercises of chapter 1\n"
 
 
 101-hello:
@@ -153,7 +158,43 @@ ex302:
 307-trim:
 	$(MAKE) -C $(CH3) 07-trim
 
+
+
+401-grep:
+	$(MAKE) -C $(CH4) 01-grep
+
+ex401:
+	$(MAKE) -C $(CH4) ex01
+
+402-1-atof-sum:
+	$(MAKE) -C $(CH4) 02-1-atof-sum
+
+402-2-atoi-sum:
+	$(MAKE) -C $(CH4) 02-2-atoi-sum
+
+ex402:
+	$(MAKE) -C $(CH4) ex02
+
+403-reverse-polish-calculator:
+	$(MAKE) -C $(CH4) 03-reverse-polish-calculator
+
+405-reverse-polish-calculator:
+	$(MAKE) -C $(CH4) 05-reverse-polish-calculator
+
+410-1-printd:
+	$(MAKE) -C $(CH4) 10-1-printd
+
+410-2-quicksort:
+	$(MAKE) -C $(CH4) 10-2-quicksort
+
+ex413:
+	$(MAKE) -C $(CH4) ex13
+
+ex414:
+	$(MAKE) -C $(CH4) ex14
+
 clean:
 	$(MAKE) -C $(CH1) clean
 	$(MAKE) -C $(CH2) clean
 	$(MAKE) -C $(CH3) clean
+	$(MAKE) -C $(CH4) clean

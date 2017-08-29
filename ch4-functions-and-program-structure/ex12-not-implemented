@@ -1,0 +1,20 @@
+#include <stdio.h>
+
+void printd(int n);
+
+int main() {
+  const int n = 325252;
+  printd(n);
+  printf("\n");
+}
+
+/* Exercise 4-12: Recursive itoa */
+void itoa(int n, char *s) {
+  if (n < 0) {
+    *s = '-';
+    n = -n;
+  }
+  if (n/10)
+    itoa(n/10, s++);
+  *s = n%10 + '0';
+}
