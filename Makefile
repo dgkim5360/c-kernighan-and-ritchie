@@ -2,13 +2,14 @@ CH1=ch1-a-tutorial-introduction
 CH2=ch2-types-operators-and-expressions
 CH3=ch3-control-flow
 CH4=ch4-functions-and-program-structure
+CH5=ch5-pointers-and-arrays
 
 default:
 	echo "\n==========\n" \
 	"Hello, <tab> key will be extremely helpful to execute the examples and exercises.\n\n" \
   "e.g.,\n" \
-	"1<tab><tab>: shows examples of chapter 1\n" \
-  "ex1<tab><tab>: shows exercises of chapter 1\n"
+	"make 1<tab><tab>: shows examples of chapter 1\n" \
+  "make ex1<tab><tab>: shows exercises of chapter 1\n"
 
 
 101-hello:
@@ -193,8 +194,57 @@ ex413:
 ex414:
 	$(MAKE) -C $(CH4) ex14
 
+
+503-strlen:
+	$(MAKE) -C $(CH5) 03-strlen
+
+504-1-alloc:
+	$(MAKE) -C $(CH5) 04-1-alloc
+
+504-2-strlen:
+	$(MAKE) -C $(CH5) 04-2-strlen
+
+505-1-strcpy:
+	$(MAKE) -C $(CH5) 05-1-strcpy
+
+505-2-strcmp:
+	$(MAKE) -C $(CH5) 05-2-strcmp
+
+ex503:
+	$(MAKE) -C $(CH5) ex03
+
+ex504:
+	$(MAKE) -C $(CH5) ex504
+
+506-sortlines:
+	$(MAKE) -C $(CH5) 06-sortlines
+
+507-date-conversion:
+	$(MAKE) -C $(CH5) 07-date-conversion
+
+508-month-name:
+	$(MAKE) -C $(CH5) 08-month-name
+
+ex509:
+	$(MAKE) -C $(CH5) ex09
+
+510-1-echo:
+	$(MAKE) -C $(CH5) 10-1-echo
+
+510-2-find:
+	$(MAKE) -C $(CH5) 10-2-find
+
+510-3-find:
+	$(MAKE) -C $(CH5) 10-3-find
+
+511-sortlines:
+	$(MAKE) -C $(CH5) 11-sortlines
+
+
+
 clean:
 	$(MAKE) -C $(CH1) clean
 	$(MAKE) -C $(CH2) clean
 	$(MAKE) -C $(CH3) clean
 	$(MAKE) -C $(CH4) clean
+	$(MAKE) -C $(CH5) clean
