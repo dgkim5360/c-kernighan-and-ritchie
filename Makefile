@@ -3,6 +3,7 @@ CH2=ch2-types-operators-and-expressions
 CH3=ch3-control-flow
 CH4=ch4-functions-and-program-structure
 CH5=ch5-pointers-and-arrays
+CH6=ch6-structures
 
 default:
 	echo "\n==========\n" \
@@ -242,9 +243,32 @@ ex509:
 
 
 
+602-point-in-rect:
+	$(MAKE) -C $(CH6) 02-point-in-rect
+
+603-count-keywords:
+	$(MAKE) -C $(CH6) 03-count-keywords
+
+604-count-keywords:
+	$(MAKE) -C $(CH6) 04-count-keywords
+
+605-word-frequency:
+	$(MAKE) -C $(CH6) 05-word-frequency
+
+606-hashtable:
+	$(MAKE) -C $(CH6) 06-hashtable
+
+ex605:
+	$(MAKE) -C $(CH6) ex05
+
+607-word-frequency:
+	$(MAKE) -C $(CH6) 07-word-frequency
+
+
 clean:
 	$(MAKE) -C $(CH1) clean
 	$(MAKE) -C $(CH2) clean
 	$(MAKE) -C $(CH3) clean
 	$(MAKE) -C $(CH4) clean
 	$(MAKE) -C $(CH5) clean
+	$(MAKE) -C $(CH6) clean
