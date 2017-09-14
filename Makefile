@@ -4,6 +4,7 @@ CH3=ch3-control-flow
 CH4=ch4-functions-and-program-structure
 CH5=ch5-pointers-and-arrays
 CH6=ch6-structures
+CH7=ch7-input-and-output
 
 default:
 	echo "\n==========\n" \
@@ -265,6 +266,17 @@ ex605:
 	$(MAKE) -C $(CH6) 07-word-frequency
 
 
+703-minprintf:
+	$(MAKE) -C $(CH7) 03-minprintf
+
+705-cat:
+	$(MAKE) -C $(CH7) 05-cat
+
+706-cat:
+	$(MAKE) -C $(CH7) 06-cat
+
+
+
 clean:
 	$(MAKE) -C $(CH1) clean
 	$(MAKE) -C $(CH2) clean
@@ -272,3 +284,4 @@ clean:
 	$(MAKE) -C $(CH4) clean
 	$(MAKE) -C $(CH5) clean
 	$(MAKE) -C $(CH6) clean
+	$(MAKE) -C $(CH7) clean
